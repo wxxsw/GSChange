@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GSChange_Example' do
+  pod 'GSChange', :path => '../'
+
+  target 'GSChange_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
