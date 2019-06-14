@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'GSChange_Example' do
   pod 'GSChange', :path => '../'
+  pod 'NSObject+Rx'
+  pod 'RxOptional'
 
   target 'GSChange_Tests' do
     inherit! :search_paths

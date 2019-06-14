@@ -1,6 +1,5 @@
 # GSChange
 
-[![CI Status](https://img.shields.io/travis/Gesen/GSChange.svg?style=flat)](https://travis-ci.org/Gesen/GSChange)
 [![Version](https://img.shields.io/cocoapods/v/GSChange.svg?style=flat)](https://cocoapods.org/pods/GSChange)
 [![License](https://img.shields.io/cocoapods/l/GSChange.svg?style=flat)](https://cocoapods.org/pods/GSChange)
 [![Platform](https://img.shields.io/cocoapods/p/GSChange.svg?style=flat)](https://cocoapods.org/pods/GSChange)
@@ -22,7 +21,7 @@ pod 'GSChange'
 
 ## Author
 
-Gesen, gesen@zhihu.com
+Gesen, i@gesen.me
 
 ## License
 

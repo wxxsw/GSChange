@@ -1,0 +1,6 @@
+framework module Pods_GSChange_Tests {
+  umbrella header "Pods-GSChange_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

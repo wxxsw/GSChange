@@ -1,0 +1,6 @@
+framework module Pods_GSChange_Example {
+  umbrella header "Pods-GSChange_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

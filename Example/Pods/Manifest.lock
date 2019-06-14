@@ -1,0 +1,38 @@
+PODS:
+  - GSChange (0.1.0):
+    - RxCocoa
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxOptional (3.6.2):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.5.0)
+
+DEPENDENCIES:
+  - GSChange (from `../`)
+  - "NSObject+Rx"
+  - RxOptional
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - "NSObject+Rx"
+    - RxCocoa
+    - RxOptional
+    - RxSwift
+
+EXTERNAL SOURCES:
+  GSChange:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GSChange: 2890c406b8b1c75c61f2fecd3150ce916833f515
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+
+PODFILE CHECKSUM: 03cdc8c52f08ca8ae60463993139cbe4da29dedf
+
+COCOAPODS: 1.7.1
