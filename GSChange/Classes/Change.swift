@@ -24,7 +24,7 @@ public enum Change {
             .map { $0! }
     }
     
-    public static func perform(action: Action, id: String?, userInfo: Any? = nil) {
+    public static func perform(action: Action, id: String?, userInfo: [AnyHashable: Any]? = nil) {
         NotificationCenter.default.post(
             name: .GSChange,
             object: nil,

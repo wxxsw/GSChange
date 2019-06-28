@@ -16,7 +16,7 @@ struct ChangeUserInfo: RawRepresentable {
     
     let action: Change.Action
     let id: String?
-    let userInfo: Any?
+    let userInfo: [AnyHashable: Any]?
     
     var rawValue: [AnyHashable: Any] {
         var value: [AnyHashable: Any] = [actionKey: action]
@@ -25,7 +25,7 @@ struct ChangeUserInfo: RawRepresentable {
         return value
     }
     
-    init(action: Change.Action, id: String?, userInfo: Any?) {
+    init(action: Change.Action, id: String?, userInfo: [AnyHashable: Any]?) {
         self.action = action
         self.id = id
         self.userInfo = userInfo
@@ -33,13 +33,12 @@ struct ChangeUserInfo: RawRepresentable {
     
     init?(rawValue: [AnyHashable : Any]) {
         guard
-            let action = rawValue[actionKey] as? Change.Action,
-            let id = rawValue[idKey] as? String
+            let action = rawValue[actionKey] as? Change.Action
             else { return nil }
         
         self.action = action
-        self.id = id
-        self.userInfo = rawValue[userInfoKey]
+        self.id = rawValue[idKey] as? String
+        self.userInfo = rawValue[userInfoKey] as? [AnyHashable : Any]
     }
     
 }
