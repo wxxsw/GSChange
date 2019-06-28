@@ -10,7 +10,7 @@ import GSChange
 
 extension Member: ChangeItem {
     
-    func changed(action: Change.Action, id: String?, userInfo: Any?) -> Member {
+    func changed(action: Change.Action, id: String?, userInfo: [AnyHashable: Any]?) -> Member {
         
         var change = self
         

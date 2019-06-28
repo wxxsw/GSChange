@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'GSChange'
-  s.version      = '0.2.1'
+  s.version      = '0.2.2'
   s.summary      = 'Automatically synchronize changes, such as likes, follow, etc.'
   s.homepage     = 'https://github.com/wxxsw/GSChange'
 
