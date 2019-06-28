@@ -8,9 +8,9 @@
 
 import GSChange
 
-extension Post: GSChangeItem {
+extension Post: ChangeItem {
     
-    func changed(action: GSChange.Action, id: String?, userInfo: Any?) -> Post {
+    func changed(action: Change.Action, id: String?, userInfo: Any?) -> Post {
 
         var change = self
         

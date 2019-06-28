@@ -58,7 +58,7 @@ class BViewController: UIViewController {
             }
             .disposed(by: rx.disposeBag)
         
-        GSChange
+        Change
             .bind(to: member)
             .disposed(by: rx.disposeBag)
     }

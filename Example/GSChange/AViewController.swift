@@ -23,7 +23,7 @@ class AViewController: UIViewController {
         
         likeButton.rx.tap
             .subscribe(onNext: { [unowned self] in
-                GSChange.perform(
+                Change.perform(
                     action:self.likeButton.isSelected ? .unlike : .like,
                     id: self.post.value?.id
                 )
@@ -39,7 +39,7 @@ class AViewController: UIViewController {
             })
             .disposed(by: rx.disposeBag)
         
-        GSChange
+        Change
             .bind(to: post)
             .disposed(by: rx.disposeBag)
     }

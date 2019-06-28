@@ -1,5 +1,5 @@
 //
-//  GSChange+Notification.swift
+//  Change+Notification.swift
 //  GSChange
 //
 //  Created by Gesen on 2019/6/14.
@@ -8,13 +8,13 @@
 
 extension Notification.Name {
     
-    static let GSChange = Notification.Name("me.gesen.GSChange")
+    static let GSChange = Notification.Name("me.gesen.Change")
     
 }
 
-struct GSChangeUserInfo: RawRepresentable {
+struct ChangeUserInfo: RawRepresentable {
     
-    let action: GSChange.Action
+    let action: Change.Action
     let id: String?
     let userInfo: Any?
     
@@ -25,7 +25,7 @@ struct GSChangeUserInfo: RawRepresentable {
         return value
     }
     
-    init(action: GSChange.Action, id: String?, userInfo: Any?) {
+    init(action: Change.Action, id: String?, userInfo: Any?) {
         self.action = action
         self.id = id
         self.userInfo = userInfo
@@ -33,7 +33,7 @@ struct GSChangeUserInfo: RawRepresentable {
     
     init?(rawValue: [AnyHashable : Any]) {
         guard
-            let action = rawValue[actionKey] as? GSChange.Action,
+            let action = rawValue[actionKey] as? Change.Action,
             let id = rawValue[idKey] as? String
             else { return nil }
         

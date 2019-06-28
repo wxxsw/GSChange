@@ -43,7 +43,7 @@ class AListViewController: UIViewController {
             }
             .disposed(by: rx.disposeBag)
         
-        GSChange
+        Change
             .bind(to: posts)
             .disposed(by: rx.disposeBag)
     }

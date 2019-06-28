@@ -8,9 +8,9 @@
 
 import GSChange
 
-extension GSChange.Action {
+extension Change.Action {
     
-    static let like = GSChange.Action(rawValue: "like")
-    static let unlike = GSChange.Action(rawValue: "unlike")
+    static let like = Change.Action(rawValue: "like")
+    static let unlike = Change.Action(rawValue: "unlike")
     
 }

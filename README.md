@@ -21,7 +21,7 @@ pod 'GSChange'
 
 ## Author
 
-Gesen, i@gesen.me
+Gesen
 
 ## License
 
