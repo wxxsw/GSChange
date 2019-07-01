@@ -40,6 +40,15 @@ public enum Change {
             .observeOn(MainScheduler.instance)
     }
     
+    public static func observe<Item: ChangeItem>(for item: BehaviorRelay<Item>) -> Observable<Item> {
+        return notification
+            .observeOn(SerialDispatchQueueScheduler(qos: .default))
+            .map { [weak item] info in item?.value.changed(action: info.action, id: info.id, userInfo: info.userInfo) }
+            .filter { [weak item] in $0 != nil && item != nil && item!.value != $0 }
+            .map { $0! }
+            .observeOn(MainScheduler.instance)
+    }
+    
     public static func observe<Item: ChangeItem>(for items: BehaviorRelay<[Item]>) -> Observable<[Item]> {
         return notification
             .observeOn(SerialDispatchQueueScheduler(qos: .default))
@@ -49,6 +58,10 @@ public enum Change {
     }
     
     public static func bind<Item: ChangeItem>(to item: BehaviorRelay<Item?>) -> Disposable {
+        return observe(for: item).bind(to: item)
+    }
+    
+    public static func bind<Item: ChangeItem>(to item: BehaviorRelay<Item>) -> Disposable {
         return observe(for: item).bind(to: item)
     }
     
