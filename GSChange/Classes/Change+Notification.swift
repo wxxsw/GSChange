@@ -12,13 +12,13 @@ extension Notification.Name {
     
 }
 
-struct ChangeUserInfo: RawRepresentable {
+public struct ChangeUserInfo: RawRepresentable {
     
-    let action: Change.Action
-    let id: String?
-    let userInfo: [AnyHashable: Any]?
+    public let action: Change.Action
+    public let id: String?
+    public let userInfo: [AnyHashable: Any]?
     
-    var rawValue: [AnyHashable: Any] {
+    public var rawValue: [AnyHashable: Any] {
         var value: [AnyHashable: Any] = [actionKey: action]
         if let id = id { value[idKey] = id }
         if let userInfo = userInfo { value[userInfoKey] = userInfo }
@@ -31,7 +31,7 @@ struct ChangeUserInfo: RawRepresentable {
         self.userInfo = userInfo
     }
     
-    init?(rawValue: [AnyHashable : Any]) {
+    public init?(rawValue: [AnyHashable : Any]) {
         guard
             let action = rawValue[actionKey] as? Change.Action
             else { return nil }

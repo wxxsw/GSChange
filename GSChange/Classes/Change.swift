@@ -16,7 +16,7 @@ public enum Change {
         public init(rawValue: String) { self.rawValue = rawValue }
     }
     
-    static var notification: Observable<ChangeUserInfo> {
+    public static var notification: Observable<ChangeUserInfo> {
         return NotificationCenter.default.rx
             .notification(.GSChange)
             .map { ChangeUserInfo(rawValue: $0.userInfo ?? [:]) }
