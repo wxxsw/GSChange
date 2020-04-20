@@ -1,6 +1,6 @@
 {
   "name": "GSChange",
-  "version": "0.1.0",
+  "version": "0.2.3",
   "summary": "Automatically synchronize changes, such as likes, follow, etc.",
   "homepage": "https://github.com/wxxsw/GSChange",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/wxxsw/GSChange.git",
-    "tag": "0.1.0"
+    "tag": "0.2.3"
   },
   "platforms": {
     "ios": "8.0"
