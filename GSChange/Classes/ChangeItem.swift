@@ -8,6 +8,6 @@
 
 public protocol ChangeItem: Equatable {
     
-    func changed(action: Change.Action, id: String?, userInfo: [AnyHashable: Any]?) -> Self
+    func changed(action: Change.Action, id: String?, userInfo: [AnyHashable: Any]?) -> Self?
     
 }

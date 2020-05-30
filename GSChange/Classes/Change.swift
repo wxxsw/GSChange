@@ -52,7 +52,7 @@ public enum Change {
     public static func observe<Item: ChangeItem>(for items: BehaviorRelay<[Item]>) -> Observable<[Item]> {
         return notification
             .observeOn(SerialDispatchQueueScheduler(qos: .default))
-            .map { [weak items] info in items?.value.map { $0.changed(action: info.action, id: info.id, userInfo: info.userInfo) } ?? [] }
+            .map { [weak items] info in items?.value.compactMap { $0.changed(action: info.action, id: info.id, userInfo: info.userInfo) } ?? [] }
             .filter { [weak items] in items?.value != $0 }
             .observeOn(MainScheduler.instance)
     }
